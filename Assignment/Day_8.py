@@ -18,3 +18,7 @@ actual_url = driver.current_url
 print(actual_url)
 actual_header = driver.header
 print(actual_header)
+
+driver.find_element(By.XPATH, "//input[@name='ssousername']").send_keys("john")
+driver.find_element(By.XPATH, "//input[contains(@title,'Please enter a password')]").send_keys("john123")
+driver.find_element(By.XPATH, "//input[contains(@title,'Please click here to sign in')]").click()
